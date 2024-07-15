@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if passed %}
+        <div class="alert alert-success">
+            Password meets all the 3 requirements and has been saved.
+        </div>
+    {% else %}
+        <div class="alert alert-danger">
+            Password does not meet the requirements.
+        </div>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Try again</a>
+    <a href="{{ url_for('view_users') }}" class="btn btn-secondary">View Users</a>
+{% endblock %}
